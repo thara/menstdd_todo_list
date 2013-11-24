@@ -7,6 +7,9 @@ class TodoListTest < MiniTest::Unit::TestCase
   def test_add
     todo_list = Class.new do
       include TodoRepository
+      def initialize
+        @list = []
+      end
     end.new
 
     todo_list.add("HOGE")

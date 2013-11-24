@@ -1,10 +1,6 @@
 
 module TodoList
   module TodoRepository
-    def initialize()
-      @list = []
-    end
-
     def add(text)
       @list.push(text)
     end
