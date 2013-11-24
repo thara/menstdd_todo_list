@@ -75,6 +75,13 @@ class TodoListTest < MiniTest::Unit::TestCase
     assert_equal(todo_list.get_all, ["VIM2", "VIM1", "VIM3", "VIM4"])
     todo_list.swap(1,2)
     assert_equal(todo_list.get_all, ["VIM2", "VIM3", "VIM1", "VIM4"])
+
+    assert_throws :index_out_of_range, 'index out of range' do
+      todo_list.swap(10,2)
+    end
+    assert_throws :index_out_of_range, 'index out of range' do
+      todo_list.swap(-10,2)
+    end
   end
 
 end

@@ -34,7 +34,13 @@ module TodoList
     end
 
     def swap(a,b)
+      throw :index_out_of_range unless (_in_range(@list, a) && _in_range(@list, b))
       @list[a], @list[b] = @list[b], @list[a]
+    end
+
+    private
+    def _in_range(list, index)
+      0 <= index && index < list.length
     end
 
   end
