@@ -1,6 +1,6 @@
 
 module TodoList
-  module ListRepository
+  module TodoRepository
     def initialize()
       @list = []
     end

@@ -6,7 +6,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_add
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("HOGE")
@@ -18,7 +18,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_get_last
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("HOGE")
@@ -29,7 +29,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_get_first
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("HOGE")
@@ -40,7 +40,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_remove_first
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("HOGE")
@@ -52,7 +52,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_remove_last
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("HOGE")
@@ -64,7 +64,7 @@ class TodoListTest < MiniTest::Unit::TestCase
 
   def test_swap
     todo_list = Class.new do
-      include ListRepository
+      include TodoRepository
     end.new
 
     todo_list.add("VIM1")
